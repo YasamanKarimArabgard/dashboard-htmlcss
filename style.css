@@ -161,8 +161,21 @@ aside {
     margin: 0px 10px;
 }
 
-.brand {
+.brand_div {
+    display: flex;
+    width: 90%;
     padding: 25px 20px;
+    justify-content: space-between;
+}
+
+.brand_div i {
+    font-size: 1.3rem;
+    color: #D1D1D1;
+    display: none;
+    cursor: pointer;
+}
+
+.brand {
     font-weight: bold;
     font-size: 1.3rem;
     color: #D1D1D1;
@@ -278,7 +291,6 @@ main {
     height: 6vh;
     width: 100%;
     display: flex;
-    background-color: darkslateblue;
     align-items: center;
     justify-content: space-around;
     background-color: #1F1F1F;
@@ -287,14 +299,12 @@ main {
 .menu_people {
     display: flex;
     width: 30%;
-    background-color: cadetblue;
     justify-content: space-around;
 }
 
 .more {
     display: flex;
     width: 20%;
-    background-color: cornsilk;
     justify-content: space-around;
 }
 
@@ -324,14 +334,6 @@ input::placeholder {
     color: #8A8A8A;
     font-size: 0.8rem;
 }
-
-
-/* .fa-search {
-    position: absolute;
-    left: 225px;
-    font-size: 0.8rem;
-    color: #8A8A8A
-} */
 
 
 /*------------------------------------------------------profile----------------------------------------*/
@@ -449,7 +451,7 @@ input::placeholder {
 }
 
 #ad_title {
-    color: #f5e4f2;
+    color: #f1eaf0;
     font-size: 1.5rem;
     line-height: 2rem;
 }
@@ -483,7 +485,6 @@ progress {
 .statistic {
     width: 30%;
     display: flex;
-    background-color: rgb(216, 92, 21);
     flex-flow: column;
     background-color: #1F1F1F;
     align-items: center;
@@ -516,7 +517,6 @@ progress {
     height: 41vh;
     width: 100%;
     display: flex;
-    background-color: rgb(177, 21, 216);
     justify-content: center;
     align-items: center;
     background-size: 300px;
@@ -568,7 +568,6 @@ progress {
     height: 41vh;
     width: 100%;
     display: flex;
-    background-color: rgb(216, 92, 21);
     flex-flow: column;
     background-color: #1F1F1F;
 }
@@ -745,7 +744,6 @@ progress {
         height: 41vh;
         width: 100%;
         display: flex;
-        background-color: rgb(177, 21, 216);
         justify-content: center;
         align-items: center;
         background-size: 300px;
@@ -762,5 +760,51 @@ progress {
     .app {
         width: 100px;
         height: 40px;
+    }
+}
+
+
+/*--------------------------------------------------------responsive(tablet)-----------------------------------------------*/
+
+@media all and (max-width:780px) {
+    body {
+        flex-flow: column;
+        flex: 1;
+    }
+    main {
+        order: 2;
+        flex: 1;
+        display: inline-block;
+        width: 100%;
+        display: flex;
+    }
+    aside {
+        width: 100%;
+        order: 1;
+        display: flex;
+        height: 70px;
+    }
+    #ad_title {
+        color: #faf1f8;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .app {
+        height: 30px;
+        width: 80px;
+    }
+    .statistic_box {
+        background-size: 280px;
+    }
+    .statistic_player {
+        height: 90px;
+        width: 90px;
+    }
+    .brand_div i {
+        font-size: 1.3rem;
+        color: #D1D1D1;
+        display: none;
+        display: block;
+        justify-self: self-end;
     }
 }
