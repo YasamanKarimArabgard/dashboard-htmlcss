@@ -229,6 +229,11 @@ main {
     background-color: #1F1F1F;
 }
 
+.statistic_copy-title,
+.statistic_box_copy {
+    display: none;
+}
+
 #people {
     padding-left: 25px;
     color: #858585;
@@ -415,6 +420,10 @@ input::placeholder {
     align-self: center;
 }
 
+#advertising_mobile-image {
+    display: none;
+}
+
 .app {
     height: 15%;
     width: 50%;
@@ -493,7 +502,6 @@ progress {
     height: 5vh;
     width: 80%;
     display: flex;
-    background-color: rgb(216, 92, 21);
     background-color: #1F1F1F;
     align-items: flex-end;
 }
@@ -511,7 +519,7 @@ progress {
     background-color: rgb(177, 21, 216);
     justify-content: center;
     align-items: center;
-    background-size: 70%;
+    background-size: 300px;
     background-image: url("images/music.png");
     background-repeat: no-repeat;
     background-position-x: center;
@@ -519,17 +527,16 @@ progress {
 }
 
 .statistic_player {
-    height: 50%;
-    width: 40%;
+    height: 100px;
+    width: 100px;
     background-color: #1F1F1F;
     border-radius: 100%;
-    border: 10px #1F1F1F solid;
-    margin-top: -60px;
+    border: 40px #1F1F1F solid;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-flow: column;
-    margin-right: 10px;
+    margin-top: 5px;
 }
 
 #statistic_player-time {
@@ -578,25 +585,25 @@ progress {
 .Compelete,
 .inprogram {
     height: 90%;
-    width: 25%;
+    width: 40%;
     display: flex;
     border-radius: 20px;
     background-color: #262626;
     flex-flow: column;
-    padding-top: 20px;
-    padding-left: 45px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .Totial,
 .Waiting {
     height: 90%;
-    width: 25%;
+    width: 40%;
     display: flex;
     background-color: #262626;
     border-radius: 20px;
     flex-flow: column;
-    padding-top: 20px;
-    padding-left: 45px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .search,
@@ -647,7 +654,7 @@ progress {
 
 /*----------------------------------------------responsive(mobile)----------------------------------------------*/
 
-@media all and (max-width:760px) {
+@media all and (max-width:580px) {
     body {
         flex-flow: column;
         flex: 1;
@@ -684,13 +691,20 @@ progress {
         width: 50%;
     }
     .profile_row1,
-    .profile_row2,
     .profile_row3 {
         width: 100%;
         display: flex;
         flex-flow: column;
         align-items: center;
+        height: 500px;
+    }
+    .profile_row2 {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
         height: 400px;
+        height: 800px;
     }
     .app {
         width: 80px;
@@ -698,9 +712,55 @@ progress {
     .advertising img {
         display: none;
     }
+    #advertising_mobile-image {
+        width: 300px;
+        height: 300px;
+        display: block;
+    }
+    .advertising {
+        height: 600px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column;
+    }
     .statistic_player {
-        position: relative;
-        top: -20px;
-        border: 0px solid #1F1F1F;
+        border: 40px solid #1F1F1F;
+    }
+    .statistic_box {
+        display: none;
+    }
+    .statistic-title {
+        display: none;
+    }
+    .statistic_copy-title {
+        height: 5vh;
+        width: 80%;
+        display: flex;
+        background-color: #1F1F1F;
+        align-items: flex-end;
+        padding-left: 40px;
+    }
+    .statistic_box_copy {
+        height: 41vh;
+        width: 100%;
+        display: flex;
+        background-color: rgb(177, 21, 216);
+        justify-content: center;
+        align-items: center;
+        background-size: 300px;
+        background-image: url("images/music.png");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-color: #1F1F1F;
+    }
+    .statistic_copy-title p,
+    .projects-title p {
+        color: #e0dfdf;
+        font-size: 1.2rem;
+    }
+    .app {
+        width: 100px;
+        height: 40px;
     }
 }
